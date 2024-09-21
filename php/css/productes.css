@@ -1,0 +1,253 @@
+#producte {
+
+    color: white;
+    height:80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px grey;
+    justify-content: center; /* Centrado horizontal */
+    width: 100%; 
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    position: relative;
+    transition: transform 0.6s ease;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%); */
+}
+
+
+
+#anunci h3 {
+    margin-top: 100px; /* Espacio desde la parte superior de la página */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #ffffff; /* Texto blanco */
+    font-family: 'Roboto', sans-serif; /* Usa una fuente moderna */
+    font-size: 36px; /* Tamaño de fuente grande */
+    font-weight: 700; /* Negrita para hacer el texto más llamativo */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas para mayor impacto */
+    background: linear-gradient(135deg, #000000 10%, #333333 100%); /* Degradado de fondo negro */
+    -webkit-background-clip: text; /* Aplica el fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo */
+    padding: 20px 0; /* Espaciado interno arriba y abajo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más oscura para resaltar el texto */
+    margin-bottom: 30px; /* Espacio inferior para separar del siguiente contenido */
+}
+
+#anunci{
+    background-color: white;
+}
+/* Fuente Google Fonts importada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+
+#productes {
+    display: grid; /* Usamos CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(13%, 1fr)); /* Definimos 2 columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    margin: 20px; /* Márgenes alrededor del contenedor */
+    text-align: center; /* Alinear contenido al centro */
+    justify-content: center;
+    align-items:center;
+    width: 80%;
+    margin-left:10%;
+    color: black;
+    top: 1000px;
+}
+
+body {
+    /* Fondo blanco de base */
+    background-color: #f5f5f5;
+    /* Degradado lineal, con patrón */
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%), 
+                      linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%);
+    /* Tamaño del patrón */
+    background-size: 100px 100px;
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* Ajustar al tamaño completo de la ventana */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#producte img {
+    width: 99.9%;
+    height: 99.9%;
+    display: block; /* Eliminar los espacios en blanco debajo de la imagen */
+    transition: transform 0.3s ease; /* Añadir transición suave */
+    justify-content: center;
+}
+
+.product-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 0;
+    box-sizing: border-box;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.6s ease; /* Transición suave para la visibilidad */
+    transition: transform 0.6s ease;
+    font-size:11px;
+}
+
+#producte:hover{
+    transform: scale(1.1); 
+}
+
+#producte:hover .product-name {
+    opacity: 1;
+    transform: scale(1.1)
+}
+
+@media (max-width: 1000px){
+    #productes{
+        display: grid; /* Usamos CSS Grid */
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    }
+}
+
+#productes.selected{
+    display: flex;
+    flex-wrap: wrap; /* Envolver productos en múltiples líneas si es necesario */
+    gap: 10px; /* Espacio entre los productos */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 150px;
+}
+
+
+/* Estilo para el producto cuando se selecciona */
+#producte.selected {
+    border-radius: 10px;
+    background-color: #111;
+    width: 80%;
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    /* transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; Añadir transición suave */
+    height: 80%;
+}
+
+/* Estilo para la imagen cuando se selecciona un producto */
+#producte.selected img {
+    width: 180px; /* Ajusta el tamaño de la imagen aquí */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 5px;
+    float: left;
+}
+
+#producte.selected:hover{
+    transform: scale(1); 
+}
+
+.back-arrow {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: none; /* Valor correcto para ocultar el elemento */
+}
+
+.add-to-cart-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #007bff; /* Cambia el color de fondo al pasar el puntero */
+    color: #ffffff;            /* Cambia el color del texto */
+    transform: scale(1.05);    /* Aumenta el tamaño del botón ligeramente */
+}
+#plus {
+    display: none; /* Ocultar inicialmente */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Alineación del texto al centro */
+    transform: translateY(50%); /* Inicialmente desplazado hacia abajo */
+    transition: transform 0.3s ease; /* Transición suave para mostrar/ocultar */
+}
+
+#plus.selected {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: -10px; /* Superposición con el contenedor del producto */
+}
+
+#plus.selected .description {
+    font-size: 14px; /* Tamaño de fuente para la descripción */
+    color: #333; /* Color de texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#plus.selected .price {
+    font-size: 16px; /* Tamaño de fuente para el precio */
+    font-weight: bold; /* Texto en negrita */
+    color: #007bff; /* Color azul para el precio */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+
+#plus.selected .add-to-cart-btn {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor apuntador al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#plus.selected .add-to-cart-btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+#plus.selected .name{
+    margin: 0; /* Quitar margen */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+
+#plus {
+    position: relative; /* Habilita el uso de `top` para desplazar elementos */
+    top: -60px;         /* Mueve todo el contenido 20px hacia arriba */
+}
+
+#plus p {
+    line-height: 1.4;
+}
+
+#plus .name {
+    font-weight: bold;         
+    font-size: 20px;           
+    margin-bottom: 10px;       
+    text-transform: uppercase; 
+    letter-spacing: 1px;       
+}
+
+#plus .description {
+    font-size: 14px;
+    color: #666;
+}
+
+#plus .price {
+    font-size: 16px;
+    color: #007bff;
+}

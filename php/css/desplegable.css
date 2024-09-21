@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+}
+
+/* Estilo para el menú lateral */
+.sidebar {
+    height: 100%; /* Altura completa */
+    width: 0; /* Ancho inicial 0 para ocultar el menú */
+    position: fixed; /* Fijo en el lado izquierdo */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Color de fondo oscuro */
+    overflow-x: hidden; /* Desbordamiento en eje x */
+    transition: 1s; /* Transición suave */
+    padding-top: 60px; /* Espaciado superior */
+    z-index: 1500;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757; /* Color de fondo al pasar el cursor */
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilo para el botón de apertura */
+#menuBtn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    z-index:1500;
+}
+
+.welcome p {
+    color: white;
+}
+
+
+.welcome {
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;
+    box-sizing: border-box; 
+    transform: translateY(calc(400% + 10px));
+} 
+
+

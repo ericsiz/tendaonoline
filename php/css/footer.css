@@ -1,0 +1,30 @@
+footer {
+    background-color: #f8f9fa; /* Color de fondo del footer */
+    padding: 20px; /* Espaciado interno */
+    text-align: right; /* Alineación del texto a la derecha */
+    border-top: 1px solid #ccc; /* Borde superior del footer */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Ancho completo */
+    color: #666; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente */
+    bottom : 0;
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    margin-top: 120px; /* Ajuste para mover el footer hacia abajo */
+ 
+}
+
+footer h3 {
+    margin: 0; /* Elimina el margen superior e inferior del encabezado */
+    font-size: 16px; /* Tamaño de fuente del encabezado */
+    font-weight: normal; /* Establece la normalidad del peso de la fuente */
+}
+
+footer a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse sobre el enlace */
+}
